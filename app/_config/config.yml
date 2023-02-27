@@ -6,3 +6,9 @@ SilverStripe\ORM\DatabaseAdmin:
         Nama: 'Varchar(255)'
         Deskripsi: 'Text'
         Harga: 'Currency'
+
+    Book:
+       fields:
+          Title: 'Varchar (255)'
+          Author: 'Varchar(255)'
+          Price: 'Varchar(255)'

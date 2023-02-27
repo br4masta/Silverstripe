@@ -12,3 +12,5 @@ SilverStripe\Control\Director:
     # ini akan menjalankan Controller dari TesController
     # jika kita akses http://localhost/Silverstripe-2/tes/coba maka fungsi coba() pada controller TesController akan dijalankan
     'tes' : 'TesController'
+    # 'api' : 'ApiController'
+    'api//$Action/$ID/$Name': 'BooksApiController'
