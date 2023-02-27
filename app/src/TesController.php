@@ -1,12 +1,15 @@
 <?php
 use SilverStripe\Control\Controller;
+use SilverStripe\CMS\Controllers\ContentController;
 
-class MyController extends Controller {
+
+class TesController extends ContentController {
     private static $allowed_actions = array(
-        'index'
+        'tes',
+        'coba'
     );
 
-    public function index() {
+    public function tes() {
         $data = array(
             'Title' => 'Hello world!',
             'Content' => 'Welcome to my page.'
@@ -14,4 +17,7 @@ class MyController extends Controller {
         return $this->customise($data)->renderWith(array('MyController', 'Page'));
     }
     
+    public function coba(){
+        return 'tes coba';
+    }
 }

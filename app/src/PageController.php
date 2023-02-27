@@ -20,13 +20,15 @@ namespace {
             "tambah",
             "sunting",
             'cobaah',
-            'forTemplate'
+            'forTemplate',
+            'TestFunction'
         ];
+
+        public function TestFunction(){
+            return 'Hello World!';
+        }
     
-        // public function index() {
-        //     return $this->customise([
-        //     ])->renderWith(['Produk', 'Page']);
-        // }
+       
         public function forTemplate() {
             return $this->renderWith('Layout/halo');
         }
@@ -48,59 +50,67 @@ namespace {
             ])->renderWith(['test', 'Page']);
         }
 
-        public function tambah() {
-            $form = Form::create(
-                $this,
-                __FUNCTION__,
-                FieldList::create(
-                    TextField::create('Nama'),
-                    TextareaField::create('Deskripsi'),
-                    CurrencyField::create('Harga')
-                ),
-                FieldList::create(
-                    FormAction::create('simpan')->setTitle('Simpan')
-                )
-            );
-    
-            return $this->customise([
-                'Form' => $form,
-            ])->renderWith(['tambah', 'Page']);
-        }
-    
-        public function sunting($request) {
-            $id = $request->param('ID');
-            $produk = Produk::get()->byID($id);
-    
-            if (!$produk) {
-                return $this->httpError(404, 'Produk tidak ditemukan');
-            }
-    
-            $form = Form::create(
-                $this,
-                __FUNCTION__,
-                FieldList::create(
-                    TextField::create('Nama')->setValue($produk->Nama),
-                    TextareaField::create('Deskripsi')->setValue($produk->Deskripsi),
-                    CurrencyField::create('Harga')->setValue($produk->Harga)
-                ),
-                FieldList::create(
-                    FormAction::create('simpan')->setTitle('Simpan')
-                )
-            );
-    
-            return $this->customise([
-                'Form' => $form,
-            ])->renderWith(['sunting', 'Page']);
-        }
-
-
-
+        
         public function produk()
         {
             $data = [];
             return $this->customise($data)->renderWith(['produk',"Page"]);
         }
        
+        public function coba()
+        {
+            $data = [];
+            return $this->customise($data)->renderWith(['coba',"Page"]);
+        }
+
+        
+
+        // public function tambah() {
+        //     $form = Form::create(
+        //         $this,
+        //         __FUNCTION__,
+        //         FieldList::create(
+        //             TextField::create('Nama'),
+        //             TextareaField::create('Deskripsi'),
+        //             CurrencyField::create('Harga')
+        //         ),
+        //         FieldList::create(
+        //             FormAction::create('simpan')->setTitle('Simpan')
+        //         )
+        //     );
+    
+        //     return $this->customise([
+        //         'Form' => $form,
+        //     ])->renderWith(['tambah', 'Page']);
+        // }
+    
+        // public function sunting($request) {
+        //     $id = $request->param('ID');
+        //     $produk = Produk::get()->byID($id);
+    
+        //     if (!$produk) {
+        //         return $this->httpError(404, 'Produk tidak ditemukan');
+        //     }
+    
+        //     $form = Form::create(
+        //         $this,
+        //         __FUNCTION__,
+        //         FieldList::create(
+        //             TextField::create('Nama')->setValue($produk->Nama),
+        //             TextareaField::create('Deskripsi')->setValue($produk->Deskripsi),
+        //             CurrencyField::create('Harga')->setValue($produk->Harga)
+        //         ),
+        //         FieldList::create(
+        //             FormAction::create('simpan')->setTitle('Simpan')
+        //         )
+        //     );
+    
+        //     return $this->customise([
+        //         'Form' => $form,
+        //     ])->renderWith(['sunting', 'Page']);
+        // }
+
+
 
         /**
          * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -127,10 +137,6 @@ namespace {
             // You can include any CSS or JS required by your project here.
             // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
         }
-        public function coba()
-        {
-            $data = [];
-            return $this->customise($data)->renderWith(['coba',"Page"]);
-        }
+       
     }
 }

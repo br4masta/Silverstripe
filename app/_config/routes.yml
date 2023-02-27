@@ -1,7 +1,14 @@
 ---
-Name: nzoaroutes
-After: framework/routes#coreroutes
+Name: approutes
+After: framework/_config/routes#coreroutes
 ---
-Director:
+SilverStripe\Control\Director:
   rules:
-    'view-meetings': 'ViewMeeting_Controller'
+    # tulis nama Url yang mau di akses misal http://localhost/Silverstripe-2/teams
+    # ini akan menjalankan Controller dari TeamController
+    # jika kita akses http://localhost/Silverstripe-2/teams/coba maka fungsi coba() pada controller TeamController akan dijalankan
+    'teams//$Action/$ID/$Name': 'TeamController'
+    # tulis nama Url yang mau di akses misal http://localhost/Silverstripe-2/tes
+    # ini akan menjalankan Controller dari TesController
+    # jika kita akses http://localhost/Silverstripe-2/tes/coba maka fungsi coba() pada controller TesController akan dijalankan
+    'tes' : 'TesController'
