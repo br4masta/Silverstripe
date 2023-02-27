@@ -14,3 +14,5 @@ SilverStripe\Control\Director:
     'tes' : 'TesController'
     # 'api' : 'ApiController'
     'api//$Action/$ID/$Name': 'BooksApiController'
+    'api2': 'TesApiController'
+    'book_crud//$Action/$ID/$OtherID': 'BukuController'

@@ -1,18 +1,23 @@
 <?php
+
 use SilverStripe\Control\Controller;
-use SilverStripe\CMS\Controllers\ContentController;
-use SilverStripe\ORM\PaginatedList;
 
-
-class TesApiController extends controller
+class TesApiController extends Controller
 {
-    public function index()
-    {
-        $apiRequest = new ApiRequest();
-        $comments = $apiRequest->getComments();
+  private static $allowed_actions = [
+    'index'
+  ];
 
-        return [
-            'Comments' => $comments
-        ];
-    }
+  public function index()
+  {
+    $url = 'https://jsonplaceholder.typicode.com/comments';
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    $comments = json_decode($response, true);
+    return $this->customise([
+      'Comments' => $comments
+    ])->renderWith('Api/TestApi');
+  }
 }
