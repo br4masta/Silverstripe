@@ -1,0 +1,8 @@
+SilverStripe\ORM\DatabaseAdmin:
+  database: 'silverstripe'
+  schema:
+    Produk:
+      fields:
+        Nama: 'Varchar(255)'
+        Deskripsi: 'Text'
+        Harga: 'Currency'

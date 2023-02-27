@@ -1,0 +1,7 @@
+---
+Name: nzoaroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'view-meetings': 'ViewMeeting_Controller'
