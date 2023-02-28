@@ -23,7 +23,8 @@ class BukuController extends Controller
         'add',
         'edit',
         'delete',
-        'update'
+        'update',
+        'simpan',
     ];
 
      // ...
@@ -38,37 +39,62 @@ class BukuController extends Controller
         return $this->getRequest()->getSession();
     }
     
-    // public function index()
-    // {
-    //     $list = Buku::get();
-    //     $paginatedList = PaginatedList::create($list, $this->getRequest());
-    //     return $this->customise([
-    //         'Books' => $paginatedList,
-    //     ])->renderWith('CRUD/BookIndex');
-    // }
 
     public function index()
-    {
-        $list = Buku::get();
-        $paginatedList = PaginatedList::create($list, $this->getRequest());
+{
+    $list = Buku::get();
+
+     // atur jumlah item yang ditampilkan pada setiap halaman
+     $itemsPerPage = 5;
+
+     $paginatedList = PaginatedList::create($list, $this->getRequest())
+         ->setPageLength($itemsPerPage);
+
+    // cek apakah ada pesan sukses dalam sesi
+    $successMessage = $this->getRequest()->getSession()->get('successMessage');
+    $pesanHapus = $this->getRequest()->getSession()->get('pesanHapus');
+
+    // hapus pesan sukses dari sesi
+    $this->getRequest()->getSession()->clear('successMessage');
+    $this->getRequest()->getSession()->clear('pesanHapus');
+
+    // dapatkan nomor halaman saat ini
+    $currentPage = $paginatedList->CurrentPage();
+
+    // buat variabel untuk menyimpan nomor halaman sebelumnya dan halaman selanjutnya
+    $previousPage = $currentPage - 1;
+    $nextPage = $currentPage + 1;
+
+    // dapatkan jumlah halaman yang tersedia
+    $totalPages = $paginatedList->TotalPages();
+
+    return $this->customise([
+        'Books' => $paginatedList,
+        'successMessage' => $successMessage, // tambahkan pesan sukses ke template
+        'pesanHapus' => $pesanHapus,
+        'currentPage' => $currentPage,
+        'previousPage' => $previousPage,
+        'nextPage' => $nextPage,
+        'totalPages' => $totalPages 
+    ])->renderWith('CRUD/BookIndex');
+}
+
     
-        // cek apakah ada pesan sukses dalam sesi
-        $successMessage = $this->getRequest()->getSession()->get('successMessage');
-        $pesanHapus = $this->getRequest()->getSession()->get('pesanHapus');
-        // Var_dump($successMessage);die;
+    public function simpan($request)
+        {
+            // Var_dump($request);die;
+            $book = Buku::create();
+            $book->Title = $request->postVar('Title');
+            $book->Author = $request->postVar('Author');
+            $book->Publisher = $request->postVar('Publisher');
+            $book->PublishedDate = $request->postVar('PublishedDate');
+            $book->write();
     
+            $this->getSession()->set('successMessage', 'Data buku berhasil ditambahkan.');
     
-        // hapus pesan sukses dari sesi
-        $this->getRequest()->getSession()->clear('successMessage');
-        $this->getRequest()->getSession()->clear('pesanHapus');
-        
-        return $this->customise([
-            'Books' => $paginatedList,
-            'successMessage' => $successMessage, // tambahkan pesan sukses ke template
-            'pesanHapus' => $pesanHapus 
-        ])->renderWith('CRUD/BookIndex');
-    }
-    
+            // Redirect to a success page or to the previous page
+            return $this->redirect($this->Link('index'));
+        }
 
     public function add()
     {
@@ -84,7 +110,7 @@ class BukuController extends Controller
             // Mengambil data buku dengan ID tertentu dari tabel "Book"
             // Render halaman dengan template "BookShow" dan layout "Layout"
             $id = $this->getRequest()->getVar('id'); 
-            var_dump($id);die;
+            // var_dump($id);die;
             $book = Buku::get()->byID($id); 
             return $this->customise(['Book' => $book])->renderWith('CRUD/BookForm'); 
         }
@@ -154,7 +180,11 @@ class BukuController extends Controller
         // Redirect ke halaman index setelah berhasil menyimpan data
         return $this->redirect($this->Link('index'));
     }
-    
+
+
+ 
+
+
 
     
 }
