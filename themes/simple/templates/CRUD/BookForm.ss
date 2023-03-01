@@ -46,19 +46,19 @@ Change it, enhance it and most importantly enjoy it!
         <h1>$BookControllerLink/update/?action=update&amp;id=$Book.ID</h1>
       <div class="mb-3">
         <label for="Title" class="form-label">Title</label>
-        <input type="text" class="form-control" id="Title" name="Title" value="$Book.Title">
+        <input type="text" class="form-control" id="Title" name="Title" value="$Book.Title" required>
       </div>
       <div class="mb-3">
         <label for="Author" class="form-label">Author</label>
-        <input type="text" class="form-control" id="Author" name="Author" value="$Book.Author">
+        <input type="text" class="form-control" id="Author" name="Author" value="$Book.Author" required>
       </div>
       <div class="mb-3">
         <label for="Publisher" class="form-label">Publisher</label>
-        <input type="text" class="form-control" id="Publisher" name="Publisher" value="$Book.Publisher">
+        <input type="text" class="form-control" id="Publisher" name="Publisher" value="$Book.Publisher" required>
       </div>
       <div class="mb-3">
         <label for="PublishedDate" class="form-label">Published Date</label>
-        <input type="date" class="form-control" id="PublishedDate" name="PublishedDate" value="$Book.PublishedDate">
+        <input type="date" class="form-control" id="PublishedDate" name="PublishedDate" value="$Book.PublishedDate" required>
       </div>
       <div class="simpan">
         <button type="submit" class="btn btn-primary">Simpan</button>
