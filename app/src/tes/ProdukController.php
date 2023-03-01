@@ -15,10 +15,7 @@ class ProdukController extends Controller {
         'sunting',
         'hapus',
     ];
-
-    public function forTemplate() {
-        return $this->renderWith('Layout/halo');
-    }
+    
 
     public function index($request) {
         $list = PaginatedList::create(Produk::get(), $request);
