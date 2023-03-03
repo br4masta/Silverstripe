@@ -27,7 +27,8 @@ class BukuController extends Controller
         'simpan',
         'data', //
         'tabeldata',
-        'getBooks'
+        'getBooks',
+        'Bookhome'
     ];
 
      // ...
@@ -42,7 +43,10 @@ class BukuController extends Controller
         return $this->getRequest()->getSession();
     }
     
-
+    public function Bookhome() {
+        return $this->renderWith('CRUD/BookHome');
+    }
+    
     public function index()
     {
         $list = Buku::get();

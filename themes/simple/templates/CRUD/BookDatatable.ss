@@ -10,7 +10,7 @@
 	
 </head>
 <body>
-
+    <% include Header %>
     <!-- pesan Jika Berhasil-->
     <% if successMessage %>
     <div class="alert alert-success" role="alert">
