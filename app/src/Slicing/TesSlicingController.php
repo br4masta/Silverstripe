@@ -16,16 +16,28 @@ class TesSlicingController extends Controller
 
     // untuk atur $Link
     // sesuaikan dengan Routingnya di route.yml
-    private static $url_segment = 'book_crud';
+    private static $url_segment = 'slicing';
 
     private static $allowed_actions = [
-        'index'
+        'index',
+        'halo',
+        'login'
     ];
 
     public function index()
     {
         $data = [];
         return $this->customise($data)->renderWith(array('index', 'Slicing/index'));
+    }
+    
+    public function halo()
+    {
+        $data = [];
+        return $this->customise($data)->renderWith(array('Slicing/halo', 'Slicing/index'));
+    }
+
+    public function login() {
+        return $this->renderWith('Slicing/login');
     }
     
     

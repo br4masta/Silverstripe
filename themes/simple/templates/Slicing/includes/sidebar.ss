@@ -1,11 +1,10 @@
 <div id="kiri">
-            <header class="header" >
+          <header class="header" >
             <div class="wrap">
                 <a href="#" style="">MG-Resto</a>
                 <button class="tombol" style="border: none; background: none;"><img src="$ThemeDir/images/img/Dashboard/menu.svg" alt=""></button>
             </div>
-            </header>
-
+          </header>
             <div class="sidebar" >
                 <hr>
                 <!-- sidebar profil -->
@@ -26,7 +25,7 @@
                 <!-- sidebar menu 1 -->
                 <div class="menu1">
                     <button id="what-news-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/newspaper.svg" alt=""><p >What News</p></button>
-                <button id="dasboard-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/cube.svg" alt=""><p>Dasboard</p></button>
+                    <button id="dasboard-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/cube.svg" alt=""><p>Dasboard</p></button>
                 </div>
 
                 <hr>
@@ -138,7 +137,7 @@
                         <div class="dropdown-container" >
                             <button><p>Kategori</p></button>
                             <button><p>Menu</p></button>
-                            <button><p>Paket</p></button>
+                            <button onclick="location.href='login';"><p>Logout</p></button>
                           </div>
                     </div>
                     
