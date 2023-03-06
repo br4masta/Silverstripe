@@ -4,6 +4,8 @@ $third_color: #F2C94C ;
 $font_color: #FFFFFF;
 $font_color_secondary: #696969;
 
+
+
 .body{
     font-family: 'Inter', sans-serif;
 }
@@ -454,6 +456,61 @@ $font_color_secondary: #696969;
     }
 }
 
+@mixin wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 221px;
+    .wrap-2{
+        display: flex;
+        border-bottom: 1px 
+        dashed #000000;
+        gap: 10px ;
+    }
+}
+
+.modal-body{
+    width: 400px;
+    border: 1px dashed #000000;
+    border-radius: 16px;
+    .wrap1{
+        @include wrap()
+    }
+    .wrap2{
+        @include wrap()
+    }
+    .wrap3{
+        @include wrap()
+    }
+    .wrap4{
+        @include wrap()
+    }
+}
+.modal-footer{
+    margin-top: 60px;
+    #Btn-cancel{
+        width: 150px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid #EEB4B0;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        p{
+            color: #CB3A31;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px
+        }
+    }
+    #Btn-buy{
+        background: #2ECC71;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        width: 150px;
+        height: 40px;
+        border: none;
+    }
+}
+
 // jquery
 .kiri-header-wrap-a{
     display: none;
@@ -527,6 +584,8 @@ $font_color_secondary: #696969;
     .menu3-p-menu {
     display:none!important;}
 
+
+    @import url('detail_dasboard');
 
 // media query
 // @media (max-width: 575px) {

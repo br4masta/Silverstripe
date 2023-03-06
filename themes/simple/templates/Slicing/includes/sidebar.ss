@@ -25,7 +25,7 @@
                 <!-- sidebar menu 1 -->
                 <div class="menu1">
                     <button id="what-news-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/newspaper.svg" alt=""><p >What News</p></button>
-                    <button id="dasboard-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/cube.svg" alt=""><p>Dasboard</p></button>
+                    <button id="dasboard-btn" type="button" class="btn btn-success" onclick="location.href='index';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/cube.svg" alt=""><p>Dasboard</p></button>
                 </div>
 
                 <hr>

@@ -21,19 +21,25 @@ class TesSlicingController extends Controller
     private static $allowed_actions = [
         'index',
         'halo',
-        'login'
+        'login',
+        'detail_dasboard',
     ];
 
     public function index()
     {
         $data = [];
-        return $this->customise($data)->renderWith(array('index', 'Slicing/index'));
+        return $this->customise($data)->renderWith(array('Slicing/dasboard', 'Slicing/page'));
+    }
+    public function detail_dasboard()
+    {
+        $data = [];
+        return $this->customise($data)->renderWith(array('Slicing/Dasboard_detail', 'Slicing/page'));
     }
     
     public function halo()
     {
         $data = [];
-        return $this->customise($data)->renderWith(array('Slicing/halo', 'Slicing/index'));
+        return $this->customise($data)->renderWith(array('Slicing/halo', 'Slicing/page'));
     }
 
     public function login() {
