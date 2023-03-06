@@ -1,0 +1,21 @@
+.btn-toolbar,
+.btn-toolbar p {
+  margin-bottom: 0;
+}
+
+.message {
+  border: 0;
+  padding: 0;
+}
+.message.bad, .message.error, .message.good, .message.warning {
+  background-color: transparent;
+}
+
+.form-group:after {
+  border-bottom: 0;
+  margin: 0;
+}
+
+.field.checkbox label.right {
+  color: inherit;
+}/*# sourceMappingURL=admin-overrides.css.map */

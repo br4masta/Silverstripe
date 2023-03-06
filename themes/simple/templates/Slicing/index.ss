@@ -73,48 +73,58 @@
         });</script>
 
 
-  <style>
-    /* @media (max-width: 575px) {
-        #main-content {
-            background-color: green;
-        }
-    }
-    @media (min-width: 576px) {
-        #main-content {
-            background-color: yellow;
-        }
-    }
-    @media (min-width: 992px) {
-        #main-content {
-            background-color: #EEFAE5;
-        }
+<style>
+    @media (max-width: 575px) {
+.content{
+    /* background-color: yellow; */
     }
 
-    @media (min-width: 1200px) {
-        #container {
-            background-color: #29B362;
-            width: auto;
+}
+#container {
+        
+        width: auto;
+    }
+@media (min-width: 576px) {
+    .content{
+        /* background-color: blue; */
         }
-        #kiri{
-            width: 20%;
-            
-        }
-        #kiri header .wrap{
-            margin-left: 25%;
-        }
-
-        .content1{
-            width: 90%;
-        }
-        .content2{
-            width: 90%;
-        }
-        .content2 .title{
-            width: auto;
+}
+@media (min-width: 992px) {
+    .content{
+        /* background-color: salmon; */
         }
 
-    } */
 
+}
+
+@media (min-width: 1200px) {
+    .content{
+    /* background-color: #CB3A31; */
+    }
+    #container {
+        
+        width: auto;
+    }
+    #kiri{
+        width: 20%;
+        
+    }
+    #kiri header .wrap{
+        /* margin-left: 25%; */
+    }
+
+    #main-content .content .content1{
+        width: 90%;
+    
+    }
+    #main-content .content .content2{
+        width: 90%;
+    }
+    .content2 .title{
+        width: auto;
+    }
+
+}
 </style>
 
 </body>

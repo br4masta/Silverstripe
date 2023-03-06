@@ -37,14 +37,18 @@ $font_color_secondary: #696969;
         height: 130px;
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .wrap{
-            position: absolute;
+            margin: auto;
             width: 215px;
             height: 40px;
             left: 15px;
             top: 45px;
             display: flex;
             align-items: center;
+            justify-content: center;
             a{
                 color: $font_color;
                 font-weight: 700;
@@ -55,8 +59,8 @@ $font_color_secondary: #696969;
             }
             button{
                 padding: 0;
+                border: none;
                 background-color: transparent;
-                border: transparent;
             }
         }
     }
@@ -79,7 +83,6 @@ $font_color_secondary: #696969;
             height: 181px;
             width: auto;
             .wrap{
-                margin: 0;
                 position: absolute; 
                 padding-top: 17px;
                 .wrap-profil{
@@ -526,47 +529,50 @@ $font_color_secondary: #696969;
 
 
 // media query
-@media (max-width: 575px) {
-    #container {
-       
-    }
+// @media (max-width: 575px) {
+//     .content{
+//         background-color: yellow;
+//         }
     
-}
-@media (min-width: 576px) {
-    #container {
-        
-    }
-}
-@media (min-width: 992px) {
-    #container {
-        
-    }
+// }
+// @media (min-width: 576px) {
+//     .content{
+//         background-color: blue;
+//         }
+// }
+// @media (min-width: 992px) {
+//     .content{
+//         background-color: salmon;
+//         }
   
 
-}
+// }
 
-@media (min-width: 1600px) {
-    #container {
+// @media (min-width: 1200px) {
+//     .content{
+//     background-color: #CB3A31;
+//     }
+//     #container {
         
-        width: auto;
-    }
-    #kiri{
-        width: 20%;
+//         width: auto;
+//     }
+//     #kiri{
+//         width: 20%;
         
-    }
-    #kiri header .wrap{
-        margin-left: 25%;
-    }
+//     }
+//     #kiri header .wrap{
+//         margin-left: 25%;
+//     }
 
-    .content1{
-        width: 90%;
+//     .content1{
+//         width: 90%;
     
-    }
-    .content2{
-        width: 90%;
-    }
-    .content2 .title{
-        width: auto;
-    }
+//     }
+//     .content2{
+//         width: 90%;
+//     }
+//     .content2 .title{
+//         width: auto;
+//     }
 
-}
+// }

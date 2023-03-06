@@ -1,6 +1,7 @@
-/**
- * This support file is used to style the WYSIWYG editor in the CMS
- */
-
-@import "typography.css?2";
-body.mceContentBody{font-size:13px;}
+body.mce-content-body a.ss-broken {
+  background-color: #d40404;
+  border: 1px #bb0404 solid;
+  color: #fff;
+  padding: 1px;
+  text-decoration: underline;
+}/*# sourceMappingURL=editor.css.map */
