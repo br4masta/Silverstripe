@@ -2,22 +2,22 @@
           <header class="header" >
             <div class="wrap">
                 <a href="#" style="">MG-Resto</a>
-                <button class="tombol" style="border: none; background: none;"><img src="$ThemeDir/images/img/Dashboard/menu.svg" alt=""></button>
+                <button class="tombol"><img src="$ThemeDir/images/img/Dashboard/menu.svg" alt=""></button>
             </div>
           </header>
             <div class="sidebar" >
                 <hr>
                 <!-- sidebar profil -->
-                <div class="profil" style="position: relative;">
-                   <div class="wrap" style="position: absolute; margin-top: 15px;">
+                <div class="profil" >
+                   <div class="wrap">
                        <div class="wrap-profil"  >
                             <img src="$ThemeDir/images/img/Dashboard/profile.png" alt="">
-                            <div class="wrap-status-profile" style="">
-                                <h1 style="font-weight: 700; font-size: 24px; margin: auto;">Haikal</h1>
-                                <h1 style="font-weight: 700; font-size: 20px; color: #696969; margin: auto;">Owner</h1>
+                            <div class="wrap-status-profile" >
+                                <h1 id="nama">Haikal</h1>
+                                <h1 id="status">Owner</h1>
                             </div>
                         </div>
-                        <p style="margin-left: 32px; text-align: left; font-style: italic; font-weight: 400; font-size: 12px; ">Super User</p>
+                        <p id="position">Super User</p>
                         <button id="edit-profil-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';"><p>Edit Profil</p></button>
                    </div> 
                 </div>
@@ -31,7 +31,7 @@
                 <hr>
 
                 <!-- Sidebar menu 2 -->
-                <div class="menu2" style=" display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="menu2">
                     <div class="dropdown" >
                         <button class="dropdown-btn ">
                           <img src="$ThemeDir/images/img/Dashboard/sidebar/server.svg" alt="">

@@ -1,0 +1,34 @@
+.app-brand {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-app-brand);
+}
+.app-brand__link, .app-brand__link:hover {
+  color: var(--color-page-text);
+  text-decoration: none;
+}
+.app-brand__logo {
+  max-width: var(--sizing-app-brand-max-width);
+  max-height: var(--sizing-app-brand-max-height);
+}
+.app-brand__logo[src*=".svg"] {
+  width: 100%;
+}
+.app-brand__name {
+  margin: 0;
+  text-align: center;
+}
+.app-brand__logo + .app-brand__name {
+  display: none;
+}
+
+.silverstripe-brand {
+  color: var(--color-page-text);
+  margin-top: var(--spacing-silverstripe-brand);
+}
+.silverstripe-brand .silverstripe-cms-logo .text {
+  fill: #051e2d;
+}
+.silverstripe-brand .silverstripe-cms-logo .glyph {
+  fill: #005ae1;
+}/*# sourceMappingURL=brand.css.map */
