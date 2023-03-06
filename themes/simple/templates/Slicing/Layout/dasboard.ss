@@ -30,8 +30,9 @@
     <div class="modal-dialog">
       <div class="modal-content" style="width: 460px;
        margin-top: 210px; display: flex; flex-direction: column; align-items: center;">
+       <button style="margin-top: 34px; margin-left: 414px; margin-right: 34px;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-header" style="display: flex;
-        flex-direction: column; margin-top: 50px; gap: 15px;">
+        flex-direction: column; margin-top: 14px; gap: 15px; padding: 0; padding-bottom: 15px;">
           <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: 700;
           font-size: 24px;
           line-height: 32px;">Paket B2B / 1 Bulan</h1>
@@ -80,3 +81,20 @@
       </div>
     </div>
   </div>
+
+  <!-- Dropdown -->
+  <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
