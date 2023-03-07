@@ -82,19 +82,4 @@
     </div>
   </div>
 
-  <!-- Dropdown -->
-  <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+  

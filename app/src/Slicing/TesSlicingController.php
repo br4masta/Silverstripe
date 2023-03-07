@@ -13,14 +13,12 @@ use SilverStripe\Control\Session;
 
 class TesSlicingController extends Controller
 {
-
     // untuk atur $Link
     // sesuaikan dengan Routingnya di route.yml
     private static $url_segment = 'slicing';
 
     private static $allowed_actions = [
         'index',
-        'halo',
         'login',
         'detail_dasboard',
     ];
@@ -28,22 +26,16 @@ class TesSlicingController extends Controller
     public function index()
     {
         $data = [];
-        return $this->customise($data)->renderWith(array('Slicing/dasboard', 'Slicing/page'));
+        return $this->customise($data)->renderWith(array('Slicing/dasboard/dasboard', 'Slicing/dasboard/pagedasboard'));
     }
     public function detail_dasboard()
     {
         $data = [];
-        return $this->customise($data)->renderWith(array('Slicing/Dasboard_detail', 'Slicing/page'));
-    }
-    
-    public function halo()
-    {
-        $data = [];
-        return $this->customise($data)->renderWith(array('Slicing/halo', 'Slicing/page'));
+        return $this->customise($data)->renderWith(array('Slicing/dasboard/Dasboard_detail', 'Slicing/dasboard/pagedasboard'));
     }
 
     public function login() {
-        return $this->renderWith('Slicing/login');
+        return $this->renderWith('Slicing/login/login');
     }
     
     
