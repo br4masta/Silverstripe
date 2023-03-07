@@ -20,7 +20,10 @@ class TesSlicingController extends Controller
     private static $allowed_actions = [
         'index',
         'login',
+        'daftar',
         'detail_dasboard',
+        'history_langganan',
+        'kategori',
     ];
 
     public function index()
@@ -33,10 +36,24 @@ class TesSlicingController extends Controller
         $data = [];
         return $this->customise($data)->renderWith(array('Slicing/dasboard/Dasboard_detail', 'Slicing/dasboard/pagedasboard'));
     }
+    public function history_langganan()
+    {
+        $data = [];
+        return $this->customise($data)->renderWith(array('Slicing/dasboard/History_langganan', 'Slicing/dasboard/pagedasboard'));
+    }
+    public function kategori()
+    {
+        $data = [];
+        return $this->customise($data)->renderWith(array('Slicing/daftar_menu/kategori/kategori', 'Slicing/dasboard/pagedasboard'));
+    }
 
     public function login() {
         return $this->renderWith('Slicing/login/login');
     }
+    public function daftar() {
+        return $this->renderWith('Slicing/daftar/daftar');
+    }
+
     
     
 

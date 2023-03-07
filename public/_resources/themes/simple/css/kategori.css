@@ -1,0 +1,370 @@
+.body {
+  font-family: "Inter", sans-serif;
+}
+
+.content-kategori {
+  margin-top: 20px;
+  width: 1031px;
+  height: 368px;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.content-kategori .header-kategori {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #25A35A;
+}
+.content-kategori .header-kategori h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 30px;
+  margin-bottom: 27px;
+}
+.content-kategori .header-kategori button {
+  background: #29B362;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  width: 68px;
+  height: 32px;
+  border: none;
+  margin: 30px;
+  margin-bottom: 27px;
+}
+.content-kategori .content-content-kategori {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.content-kategori .content-content-kategori .wrap1 {
+  width: 941px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Rounded sliders */
+}
+.content-kategori .content-content-kategori .wrap1 .wrap-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content-kategori .content-content-kategori .wrap1 .wrap-2 p {
+  margin-bottom: 0;
+}
+.content-kategori .content-content-kategori .wrap1 .wrap-2 .name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.content-kategori .content-content-kategori .wrap1 .wrap-2 .status {
+  width: 24px;
+  height: 20px;
+  background: #F0F3FF;
+  border: 1px solid #B1C5F6;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-kategori .content-content-kategori .wrap1 .wrap-2 .status p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3267E3;
+}
+.content-kategori .content-content-kategori .wrap1 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.content-kategori .content-content-kategori .wrap1 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.content-kategori .content-content-kategori .wrap1 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap1 .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap1 input:checked + .slider {
+  background-color: #29B362;
+}
+.content-kategori .content-content-kategori .wrap1 input:focus + .slider {
+  box-shadow: 0 0 1px #29B362;
+}
+.content-kategori .content-content-kategori .wrap1 input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.content-kategori .content-content-kategori .wrap1 .slider.round {
+  border-radius: 34px;
+}
+.content-kategori .content-content-kategori .wrap1 .slider.round:before {
+  border-radius: 50%;
+}
+.content-kategori .content-content-kategori .wrap2 {
+  width: 941px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Rounded sliders */
+}
+.content-kategori .content-content-kategori .wrap2 .wrap-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content-kategori .content-content-kategori .wrap2 .wrap-2 p {
+  margin-bottom: 0;
+}
+.content-kategori .content-content-kategori .wrap2 .wrap-2 .name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.content-kategori .content-content-kategori .wrap2 .wrap-2 .status {
+  width: 24px;
+  height: 20px;
+  background: #F0F3FF;
+  border: 1px solid #B1C5F6;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-kategori .content-content-kategori .wrap2 .wrap-2 .status p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3267E3;
+}
+.content-kategori .content-content-kategori .wrap2 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.content-kategori .content-content-kategori .wrap2 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.content-kategori .content-content-kategori .wrap2 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap2 .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap2 input:checked + .slider {
+  background-color: #29B362;
+}
+.content-kategori .content-content-kategori .wrap2 input:focus + .slider {
+  box-shadow: 0 0 1px #29B362;
+}
+.content-kategori .content-content-kategori .wrap2 input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.content-kategori .content-content-kategori .wrap2 .slider.round {
+  border-radius: 34px;
+}
+.content-kategori .content-content-kategori .wrap2 .slider.round:before {
+  border-radius: 50%;
+}
+.content-kategori .content-content-kategori .wrap3 {
+  width: 941px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Rounded sliders */
+}
+.content-kategori .content-content-kategori .wrap3 .wrap-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content-kategori .content-content-kategori .wrap3 .wrap-2 p {
+  margin-bottom: 0;
+}
+.content-kategori .content-content-kategori .wrap3 .wrap-2 .name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.content-kategori .content-content-kategori .wrap3 .wrap-2 .status {
+  width: 24px;
+  height: 20px;
+  background: #F0F3FF;
+  border: 1px solid #B1C5F6;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-kategori .content-content-kategori .wrap3 .wrap-2 .status p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3267E3;
+}
+.content-kategori .content-content-kategori .wrap3 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.content-kategori .content-content-kategori .wrap3 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.content-kategori .content-content-kategori .wrap3 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap3 .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap3 input:checked + .slider {
+  background-color: #29B362;
+}
+.content-kategori .content-content-kategori .wrap3 input:focus + .slider {
+  box-shadow: 0 0 1px #29B362;
+}
+.content-kategori .content-content-kategori .wrap3 input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.content-kategori .content-content-kategori .wrap3 .slider.round {
+  border-radius: 34px;
+}
+.content-kategori .content-content-kategori .wrap3 .slider.round:before {
+  border-radius: 50%;
+}
+.content-kategori .content-content-kategori .wrap4 {
+  width: 941px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Rounded sliders */
+}
+.content-kategori .content-content-kategori .wrap4 .wrap-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content-kategori .content-content-kategori .wrap4 .wrap-2 p {
+  margin-bottom: 0;
+}
+.content-kategori .content-content-kategori .wrap4 .wrap-2 .name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.content-kategori .content-content-kategori .wrap4 .wrap-2 .status {
+  width: 24px;
+  height: 20px;
+  background: #F0F3FF;
+  border: 1px solid #B1C5F6;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-kategori .content-content-kategori .wrap4 .wrap-2 .status p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3267E3;
+}
+.content-kategori .content-content-kategori .wrap4 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.content-kategori .content-content-kategori .wrap4 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.content-kategori .content-content-kategori .wrap4 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap4 .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.content-kategori .content-content-kategori .wrap4 input:checked + .slider {
+  background-color: #29B362;
+}
+.content-kategori .content-content-kategori .wrap4 input:focus + .slider {
+  box-shadow: 0 0 1px #29B362;
+}
+.content-kategori .content-content-kategori .wrap4 input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.content-kategori .content-content-kategori .wrap4 .slider.round {
+  border-radius: 34px;
+}
+.content-kategori .content-content-kategori .wrap4 .slider.round:before {
+  border-radius: 50%;
+}/*# sourceMappingURL=kategori.css.map */
