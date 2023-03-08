@@ -51,7 +51,7 @@
                            <img class="img-menu" src="$ThemeDir/images/img/Dashboard/sidebar/panah bawah.svg" alt="">
                         </button>
                         <div class="dropdown-container" >
-                            <button><p>Kategori</p></button>
+                            <button onclick="location.href='kategori';"><p>Kategori</p></button>
                             <button><p>Menu</p></button>
                             <button><p>Paket</p></button>
                           </div>

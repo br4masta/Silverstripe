@@ -17,18 +17,21 @@
                                     <div class="wrap">
                                         <img src="$ThemeDir/images/img/Dashboard/store-pusat.svg" alt="">
                                         <p>Ratu Gurih Seafood Mar...</p>
+                                        <span class="tooltiptext"><p>Ratu Gurih Seafood Market dan Resto</p></span>
                                         <div class="status-aktif"><p>Aktif</p></div>
                                     </div>
                                 </li>
                                 <li><div class="wrap">
                                     <img src="$ThemeDir/images/img/Dashboard/store-pusat.svg" alt="">
                                     <p>Cabang 2</p>
+                                    <span class="tooltiptext"><p>Cabang 2</p></span>
                                     <div class="status-aktif"><p>Aktif</p></div>
                                     
                                 </div></li>
                                 <li><div class="wrap">
                                     <img src="$ThemeDir/images/img/Dashboard/store-pusat.svg" alt="">
                                     <p>Cabang 3</p>
+                                    <span class="tooltiptext"><p>Cabang 2</p></span>
                                     <div class="status-non-aktif">
                                         <p>Menunggu Pembayaran</p>
                                     </div>

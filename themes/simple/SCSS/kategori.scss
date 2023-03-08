@@ -148,3 +148,67 @@ $border-color: #25A35A;
     }
 }
 
+.modal-content{
+  width: 456px;
+  height: 239px;
+  background-color: #FFFFFF;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 61px;
+  margin-top: 235px;
+  p{
+    margin: 0;
+  }
+  .modal-footer-kategori{
+    display: flex;
+    gap: 55px;
+    #tidak{
+    background-color: $fontthirdcolor;
+    border: none;
+    width: 74px;
+    height: 40px;
+    }
+    #ya{
+    background-color: $primary_color;
+    border: none;
+    width: 74px;
+    height: 40px;
+    color: black;
+    }
+    #simpan{
+      width: 388px;
+      height: 40px; 
+      background-color: $primary_color;
+    }
+  }
+  .modal-form-body-kategori{
+    width: 388px;
+    h1{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: left;
+      margin: 0;
+    }
+    .input-form{
+      margin-top: 15px;
+      display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      gap: 15px;
+      input{
+        width: 255px;
+        height: 42px;
+        border: 1px solid #B0B0B0;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+  
+}
