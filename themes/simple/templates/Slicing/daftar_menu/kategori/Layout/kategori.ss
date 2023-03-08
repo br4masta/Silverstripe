@@ -39,13 +39,9 @@
             <p>ubah</p>
         </button>
     </div>
-    <div class="content-content-kategori"
-    ondragover="onDragOver(event);"
-    ondrop="onDrop(event);" style="height: 300px;">
+    <div class="content-content-kategori" id="items">
         
-        <div class="wrap1" id="draggable-1"
-        draggable="true"
-        ondragstart="onDragStart(event);">
+        <div class="wrap1" id="draggable-1">
             <div class="wrap-2">
                 <img src="$ThemeDir/images/img/Kategori/bx_move-vertical.svg" alt="">
                 <p class="name">Indonesian Food</p>
@@ -59,9 +55,7 @@
             </label>
         </div>
         
-        <div class="wrap2" id="draggable-2"
-        draggable="true"
-        ondragstart="onDragStart(event);">
+        <div class="wrap2" id="draggable-2">
             <div class="wrap-2">
                 <img src="$ThemeDir/images/img/Kategori/bx_move-vertical.svg" alt="">
                 <p class="name">Minuman</p>
@@ -77,9 +71,7 @@
           
         </div>
 
-        <div class="wrap3" id="draggable-3"
-        draggable="true"
-        ondragstart="onDragStart(event);">
+        <div class="wrap3" id="draggable-3">
             <div class="wrap-2">
                 <img src="$ThemeDir/images/img/Kategori/bx_move-vertical.svg" alt="">
                 <p class="name">Asian Food</p>
@@ -90,9 +82,7 @@
         </label>
         </div>
 
-        <div class="wrap4" id="draggable-4"
-        draggable="true"
-        ondragstart="onDragStart(event);">
+        <div class="wrap4" id="draggable-4">
             <div class="wrap-2">
                 <img src="$ThemeDir/images/img/Kategori/bx_move-vertical.svg" alt="">
                 <p class="name">Appetizer</p>
@@ -108,32 +98,12 @@
     </div>
 </div>
 
-<script>
-    function onDragStart(event) {
-    event
-      .dataTransfer
-      .setData('text/plain', event.target.id);
-  
-    event
-      .currentTarget
-      .style
-    //   .backgroundColor = '';
-  }
+<script src="$ThemeDir/node_modules/sortablejs/Sortable.min.js"> 
+</script>
 
-  function onDragOver(event) {
-    event.preventDefault();
-  }
+<% require themedJavascript('Sortable.min') %>
 
-  function onDrop(event) {
-    const id = event
-      .dataTransfer
-      .getData('text');
-
-      const draggableElement = document.getElementById(id);
-      const dropzone = event.target;
-      dropzone.appendChild(draggableElement);
-      event
-    .dataTransfer
-    .clearData();
-  }
+<script type="text/javascript">
+    var container = document.getElementById('items');
+    var sort = Sortable.create(container, {});
 </script>

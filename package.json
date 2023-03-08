@@ -1,0 +1,22 @@
+{
+  "name": "silverstripe-2",
+  "version": "1.0.0",
+  "description": "[![CI](https://github.com/silverstripe/silverstripe-installer/actions/workflows/ci.yml/badge.svg)](https://github.com/silverstripe/silverstripe-installer/actions/workflows/ci.yml) [![Silverstripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/br4masta/Silverstripe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/br4masta/Silverstripe/issues"
+  },
+  "homepage": "https://github.com/br4masta/Silverstripe#readme",
+  "dependencies": {
+    "sortablejs": "^1.15.0"
+  }
+}
