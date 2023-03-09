@@ -24,8 +24,8 @@
                 <hr>
                 <!-- sidebar menu 1 -->
                 <div class="menu1">
-                    <button id="what-news-btn" type="button" class="btn btn-success" onclick="location.href='dasboard.html';" class="active" ><img src="$ThemeDir/images/img/Dashboard/sidebar/newspaper.svg" alt=""><p >What News</p></button>
-                    <button id="dasboard-btn" type="button" class="btn btn-success" onclick="location.href='index';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/cube.svg" alt=""><p>Dasboard</p></button>
+                    <button id="what-news-btn" type="button" class="btn btn-success" onclick="location.href='index';" ><img src="$ThemeDir/images/img/Dashboard/sidebar/newspaper.svg" alt=""><p >What News</p></button>
+                    <button id="dasboard-btn" type="button" class="btn btn-success" onclick="location.href='index';"><img src="$ThemeDir/images/img/Dashboard/sidebar/cube.svg" alt=""><p>Dasboard</p></button>
                 </div>
 
                 <hr>
@@ -152,3 +152,35 @@
             </div>
             
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        
+        <!-- <script>
+           var selector = '.menu1 button';
+
+        $(selector).on('click', function(){
+            $(selector).removeClass('active');
+            $(this).addClass('active');
+        });
+        </script> -->
+
+        <script>
+          $(".btn").click(function(){
+   sessionStorage.setItem("activeButton", $(this).attr("id"));
+});
+
+$(document).ready(function(){
+   var activeButton = sessionStorage.getItem("activeButton");
+   if(activeButton){
+      $("#" + activeButton).addClass("active");
+   }
+});
+
+
+var selector = '.dropdown button';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
+        </script>

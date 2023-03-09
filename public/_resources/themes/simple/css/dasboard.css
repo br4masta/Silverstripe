@@ -151,6 +151,9 @@
   background-color: #2ECC71;
   border-radius: 6px;
 }
+#kiri .sidebar button.active {
+  background-color: #29B362;
+}
 #kiri .menu2 {
   display: flex;
   flex-direction: column;
@@ -188,6 +191,9 @@
 #kiri .menu2 .dropdown button:hover {
   background-color: #2ECC71;
   border-radius: 6px;
+}
+#kiri .menu2 .dropdown button.active {
+  background-color: #29B362;
 }
 #kiri .menu2 .dropdown .dropdown-container {
   display: none;

@@ -172,6 +172,9 @@ $font_color_secondary: #696969;
             button:hover{
                 @include hover_sidebar_button()
             }
+            button.active{
+                background-color: $primary_color;
+            }
         }
 
         .menu2{
@@ -210,6 +213,9 @@ $font_color_secondary: #696969;
                 }
                 button:hover{
                     @include hover_sidebar_button()
+                }
+                button.active{
+                    background-color: $primary_color;
                 }
                 .dropdown-container{
                     display: none;

@@ -134,6 +134,7 @@
         console.log(evt.oldIndex + '-' + evt.newIndex);
       }
     });
+    
 </script>
 
 <!-- script ini digunakan untuk menampilkan validasi terhadap tombol switch -->
@@ -151,6 +152,7 @@
       toggle.checked = false;
       console.log("menyala")
       console.log("ini adalah baris" + i)
+  
       // kirim nilai i ke function confirmSwitch(i)
       // .off() digunakan supaya nilai yang dikirim hanya sekali
       $('#modal-aktif-kategori #ya').off().on('click', function() {

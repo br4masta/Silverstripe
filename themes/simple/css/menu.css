@@ -1,0 +1,81 @@
+.Menu-content {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Menu-content .menu {
+  width: 900px;
+  background-color: aliceblue;
+}
+.Menu-content .menu .menu-card {
+  background-color: white;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Menu-content .menu .menu-card .background {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+.Menu-content .menu .menu-card .background img {
+  width: 100%;
+  height: 200px;
+}
+.Menu-content .menu .menu-card .main-content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+.Menu-content .menu .menu-card .main-content-card input {
+  width: 16px;
+  height: 16px;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan {
+  background-color: #F0FCF6;
+  width: 232px;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan .keterangan-isi {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan .keterangan-isi p {
+  margin: 0;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan .keterangan-isi .p-keterangan {
+  width: 110px;
+  text-align: left;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan .status {
+  margin-left: 5px;
+  width: 43px;
+  height: 20px;
+  background: #F0FCF6;
+  border: 1px solid #B9EED0;
+  border-radius: 6px;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan .status p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2ECC71;
+}
+.Menu-content .menu .menu-card .main-content-card .keterangan h1 {
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
+}
+.Menu-content .menu .menu-card .main-content-card .dropdown {
+  margin-bottom: 24px;
+}/*# sourceMappingURL=menu.css.map */

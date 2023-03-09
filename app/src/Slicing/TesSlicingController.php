@@ -24,6 +24,7 @@ class TesSlicingController extends Controller
         'detail_dasboard',
         'history_langganan',
         'kategori',
+        'menu',
     ];
 
     public function index()
@@ -45,6 +46,11 @@ class TesSlicingController extends Controller
     {
         $data = [];
         return $this->customise($data)->renderWith(array('Slicing/daftar_menu/kategori/kategori', 'Slicing/dasboard/pagedasboard'));
+    }
+    public function menu()
+    {
+        $data = [];
+        return $this->customise($data)->renderWith(array('Slicing/daftar_menu/menu/menu', 'Slicing/dasboard/pagedasboard'));
     }
 
     public function login() {
