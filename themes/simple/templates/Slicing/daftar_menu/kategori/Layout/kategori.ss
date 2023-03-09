@@ -19,7 +19,7 @@
                 </div>
             </div>
             <label class="switch">
-                 <input type="checkbox" id="myCheck" class="tes-checkbox" onclick="toggleSwitch(this)">
+                 <input type="checkbox" id="myCheck" class="tes-checkbox" >
                 <span class="slider round"></span>
             </label>
         </div>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <label class="switch">
-                 <input type="checkbox" onclick="toggleSwitch(this)">
+                 <input type="checkbox" class="tes-checkbox" >
                 <span class="slider round"></span>
             </label>
           
@@ -46,7 +46,7 @@
                 <p class="name">Asian Food</p>
             </div>
         <label class="switch">
-            <input type="checkbox" onclick="toggleSwitch(this)">
+            <input type="checkbox" class="tes-checkbox" >
             <span class="slider round"></span>
         </label>
         </div>
@@ -60,22 +60,11 @@
                 </div>
             </div>
             <label class="switch">
-                <input type="checkbox" onclick="toggleSwitch(this)">
+                <input type="checkbox" class="tes-checkbox" >
                 <span class="slider round"></span>
             </label>
         </div>
     </div>
-</div>
-
-<!-- Button trigger modal -->
-<div class="test" style="display: flex; gap: 50px;">
-  <h1>implementasikan kedalam Toogle switch -></h1>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-aktif-kategori">
-    aktifkan
-  </button>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-nonaktif-kategori">
-    nonaktifkan
-  </button>
 </div>
 
 <!-- toogle bar modal -->
@@ -130,31 +119,69 @@
 
 
 
-<script src="$ThemeDir/node_modules/sortablejs/Sortable.min.js"> 
-</script>
 
+
+
+<!-- script ini digunakan untuk membuat sorlist yang bisa di drag and drop -->
+<!-- kita menggunakan library rubaxa -->
+<!-- kita import terlebih dahulu Sortable.min.js nya -->
 <% require themedJavascript('Sortable.min') %>
 
 <script type="text/javascript">
     var container = document.getElementById('items');
-    var sort = Sortable.create(container, {});
+    var sort = Sortable.create(container, {
+      onUpdate: function(evt){
+        console.log(evt.oldIndex + '-' + evt.newIndex);
+      }
+    });
 </script>
 
+<!-- script ini digunakan untuk menampilkan validasi terhadap tombol switch -->
+<!-- validasi berupa modal bawaan dari bootsrap -->
 <script>
-  // var group = 
-  document.getElementById("myCheck").addEventListener('change', function(e) {
-if (this.checked) {
-  $('#modal-aktif-kategori').modal('show');
-  if (!confirm("This will shutdown power! Are you sure?")) {
-    this.checked = false;
-  }
-} else {
-  $('#modal-nonaktif-kategori').modal('show');
-  if (!confirm("This will shutdown power! Are you sure?")) {
-    this.checked = true;
-  }
-};
-});
-</script>
+  var checkboxes = document.getElementsByClassName("tes-checkbox");
 
-s
+  for (let i = 0; i < checkboxes.length; i++) {
+  const toggle = checkboxes[i];
+
+  toggle.onclick = function(){
+    if (toggle.checked) {
+      // tampilkan modal konfirmasi
+      $('#modal-aktif-kategori').modal('show');
+      toggle.checked = false;
+      console.log("menyala")
+      console.log("ini adalah baris" + i)
+      // kirim nilai i ke function confirmSwitch(i)
+      // .off() digunakan supaya nilai yang dikirim hanya sekali
+      $('#modal-aktif-kategori #ya').off().on('click', function() {
+      confirmSwitch(i);
+});
+    } 
+    else {
+      // jika user tidak menyetujui, reset toggle
+      $('#modal-nonaktif-kategori').modal('show');
+      toggle.checked = true;
+      console.log("mati")
+      // kirim nilai i ke function confirmSwitch(i) 
+      // .off() digunakan supaya nilai yang dikirim hanya sekali
+      $('#modal-nonaktif-kategori #ya').off().on('click', function() {
+      confirmSwitch(i);
+  });
+    }
+  }
+}
+
+function confirmSwitch(i) {
+  // jika pengguna menekan tombol 'Ya' pada modal konfirmasi, lakukan tindakan yang diinginkan
+  console.log(i);
+  if(checkboxes[i].checked == true){
+    checkboxes[i].checked = false;
+  }else{
+    checkboxes[i].checked = true;
+  }
+  // console.log("Toggle switch on");
+  // sembunyikan modal konfirmasi
+  $('#modal-aktif-kategori').modal('hide');
+  $('#modal-nonaktif-kategori').modal('hide');
+}
+</script>
