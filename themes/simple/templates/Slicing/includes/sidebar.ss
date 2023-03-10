@@ -52,7 +52,7 @@
                         </button>
                         <div class="dropdown-container" >
                             <button onclick="location.href='kategori';"><p>Kategori</p></button>
-                            <button><p>Menu</p></button>
+                            <button onclick="location.href='menu';"><p>Menu</p></button>
                             <button><p>Paket</p></button>
                           </div>
                     </div>

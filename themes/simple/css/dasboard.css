@@ -428,6 +428,9 @@
   line-height: 24px;
   margin: 0;
 }
+#main-content .header .menu .dropdown-menu .wrap-dropdown button:hover {
+  background-color: #2cbb67;
+}
 #main-content .content {
   width: auto;
   margin: 0;

@@ -1,12 +1,85 @@
 .Menu-content{
-    background-color: red;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    .menu{
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-top: 50px;
+    gap: 30px;
+    .back{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 105px;
+        height: 32px;
+        background-color: #2ECC71;
+        background: #2ECC71;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        border: none;
+        p{
+            margin: 0;
+          
+        }
+    }
+    .wrap-sorting{
+        display: flex;
+        align-items: center;
+        p{
+            margin: 0;
+        }
+        .button-wrap{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        
+            .change{
+                background-color: #2ECC71;
+            border: none;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+            }
+            .menu{
+                display: flex;
+                align-items: center;
+                width: 146px;
+                height: 32px;
+                left: 626px;
+                top: 232px;
+                background: #2ECC71;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+                border-radius: 6px;
+                gap: 4px;
+                border: none;
+    
+                p{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .filter{
+        button{
+            background-color: #2ECC71;
+            border: none;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+        }
+        button:hover{
+            background-color: #2cbb67;
+        }
+    }
+    .menu-content{
         width: 900px;
         background-color: aliceblue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         .menu-card{
             background-color: white;
             width: 280px;
@@ -46,6 +119,9 @@
                         align-items: center;
                         p{
                             margin:0;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 22px;
                         }
                         .p-keterangan{
                             width: 110px;
@@ -75,10 +151,153 @@
                 }
                 .dropdown{
                    margin-bottom: 24px;
+                    width: 79px;
+                    height: 34px;
+                    background-color: #2ECC71;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+                    border-radius: 6px;
+                    .btn{
+                        border: none;
+                    }
+                }
+                .dropdown:focus{
+                    border: none;
+                    background-color: red;
                 }
             }
 
             
+        }
+    }
+    .menu-table{
+        display: none;
+        .table{
+            width: 1048px;
+            height: 48px;
+            thead{
+                background-color: #2cbb67;
+                tr{
+                    th{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            tbody{
+                background-color: #ffff;
+                td{
+                    .dropdown{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 24px;
+                         width: 79px;
+                         height: 34px;
+                         background-color: #2ECC71;
+                         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+                         border-radius: 6px;
+                         .btn{
+                             border: none;
+                         }
+                         .dropdown-menu:hover{
+                            li{
+                                .dropdown-item:hover{
+                                    background-color: #2ECC71;
+                                    
+                                }
+                            }
+                         }
+                     }
+                }
+                
+            }
+        }
+    }
+
+    .input-content{
+        display: none;
+        width: 1092px;
+        height: 824px;
+        .baris1{
+            margin: 30px;
+            margin-right: 42px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .gambar{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .status{
+                background: #F0FCF6;
+                border: 1px solid #B9EED0;
+                border-radius: 6px;
+                p{
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #2ECC71;
+                    padding: 8px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                }
+            }
+            
+        }
+        .baris2{
+            margin: 30px;
+            margin-right: 42px;
+            display: flex;
+            flex-direction: column;
+            gap: 47px;
+            .input{
+                display: flex;
+                gap: 20px;
+                p{
+                    text-align: left;
+                    width: 227px;
+                    margin: 0;
+                }
+                input{
+                    width: 644px;
+                    height: 42px;
+                    background: #D5D5D5;
+                    border: 1px solid #B0B0B0;
+                    border-radius: 6px;
+                }
+
+            }
+        }
+        .baris3{
+            margin: 30px;
+            margin-right: 42px;
+            .judul{
+                margin-bottom: 15px;
+               h1{
+                text-align: left;
+                   font-weight: 700;
+                    font-size: 14px;
+                    line-height: 18px
+               } 
+            }
+            .baris3-content{
+                .table{
+                    width: 400px;
+                    height: 146px;
+                    thead{
+                        background-color: #2ECC71;
+                    }
+                    tbody{
+                        background-color: #F0FCF6;
+                        tr{
+                            border-bottom: #B0B0B0;
+                        }
+                    }
+                }
+            }
         }
     }
 }

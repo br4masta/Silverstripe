@@ -6,9 +6,13 @@
                         <img src="$ThemeDir/images/img/Dashboard/search.svg" alt="" >
                         <input type="text" placeholder="pencarian" >
                     </div>
-                    <button id="notif">
+                    <button id="notif" type="button" class="btn btn-primary position-relative">
                         <img src="$ThemeDir/images/img/Dashboard/bell.svg" alt="">
-                    </button>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          2
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </button>
                     <button id="store" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="$ThemeDir/images/img/Dashboard/store-pusat.svg" alt=""><p>Pusat</p></button>
                     <div class="dropdown-menu">
                         <div class="wrap-dropdown">
