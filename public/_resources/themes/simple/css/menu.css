@@ -26,6 +26,14 @@
 .Menu-content .wrap-sorting {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+.Menu-content .wrap-sorting select {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  border-radius: 9px;
+  color: #8E8E8E;
 }
 .Menu-content .wrap-sorting p {
   margin: 0;
@@ -159,9 +167,19 @@
 .Menu-content .menu-content .menu-card .main-content-card .dropdown .btn {
   border: none;
 }
-.Menu-content .menu-content .menu-card .main-content-card .dropdown:focus {
-  border: none;
-  background-color: red;
+.Menu-content .menu-content .menu-card .main-content-card .dropdown .dropdown-menu {
+  padding: 0;
+}
+.Menu-content .menu-content .menu-card .main-content-card .dropdown .dropdown-menu li .dropdown-item {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.Menu-content .menu-content .menu-card .main-content-card .dropdown-menu:hover li .dropdown-item:hover {
+  background-color: #2ECC71;
 }
 .Menu-content .menu-table {
   display: none;
@@ -195,8 +213,43 @@
 .Menu-content .menu-table .table tbody td .dropdown .btn {
   border: none;
 }
+.Menu-content .menu-table .table tbody td .dropdown .dropdown-menu {
+  padding: 0;
+}
+.Menu-content .menu-table .table tbody td .dropdown .dropdown-menu li .dropdown-item {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 .Menu-content .menu-table .table tbody td .dropdown .dropdown-menu:hover li .dropdown-item:hover {
   background-color: #2ECC71;
+}
+.Menu-content .menu-table .table tbody td .status .aktif {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2ECC71;
+  background: #F0FCF6;
+  border: 1px solid #B9EED0;
+  border-radius: 6px;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.Menu-content .menu-table .table tbody td .status .nonaktif {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #CB3A31;
+  background: #FFF4F2;
+  border: 1px solid #EEB4B0;
+  border-radius: 6px;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .Menu-content .input-content {
   display: none;

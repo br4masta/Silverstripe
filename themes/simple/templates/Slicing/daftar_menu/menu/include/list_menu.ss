@@ -35,9 +35,9 @@
                     </button>
                   
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" onclick="view()">view</a></li>
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Delete</a></li>
                     </ul>
                   </div>
             </div>
@@ -79,9 +79,9 @@
                         </a> 
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">View</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" onclick="view()">View</a></li>
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                       </div>
                 </div>
@@ -122,9 +122,9 @@
                         </a> 
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">View</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" onclick="view()">View</a></li>
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                       </div>
                 </div>
@@ -167,9 +167,9 @@
                     </button>
                   
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">view</a></li>
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Delete</a></li>
                     </ul>
                   </div>
             </div>
@@ -211,9 +211,9 @@
                         </a> 
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">View</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" onclick="view()">View</a></li>
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                       </div>
                 </div>
@@ -254,11 +254,16 @@
                         </a> 
                       
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">View</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" onclick="view()">View</a></li>
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                       </div>
                 </div>
                 </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    
+    

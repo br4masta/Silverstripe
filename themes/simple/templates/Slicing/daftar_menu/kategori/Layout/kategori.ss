@@ -107,7 +107,9 @@
         <h1>Form Kategori</h1>
         <div class="input-form">
           <input type="text" placeholder="Masukan Kategori">
-          <img src="$ThemeDir/images/img/Kategori/plus-circle.svg" alt="">
+          <button class="tambah-input" onclick="tambah()">
+            <img src="$ThemeDir/images/img/Kategori/plus-circle.svg" alt="">
+          </button>
         </div>
       </div>
       <div class="modal-footer-kategori">
@@ -126,6 +128,92 @@
 <!-- kita menggunakan library rubaxa -->
 <!-- kita import terlebih dahulu Sortable.min.js nya -->
 <% require themedJavascript('Sortable.min') %>
+
+<!-- menambahkan element baru -->
+<script>
+  // Memanggil fungsi tambahElemen setiap kali tombol dengan kelas tambah-input diklik 
+var tambah = function tambahElement() {
+    const elementBaru = document.createElement('div');
+
+// Memberi isi kontent
+elementBaru.innerHTML = `<input type="text" placeholder="Masukan Kategori">
+          <button class="tambah-input" onclick="tambah()">
+            <img src="$ThemeDir/images/img/Kategori/plus-circle.svg" alt="">
+          </button>
+          <button onclick="hapus()" class="hapus-input">
+            <img src="$ThemeDir/images/img/Kategori/minus-circle.svg" alt="">
+          </button>`;
+
+// Memberi Nama Class
+elementBaru.className = "input-form";
+
+// Menampilan Element HTML ke Browser
+var content = document.querySelector('.modal-form-body-kategori');
+content.appendChild(elementBaru);
+console.log("tambah sukses")
+
+}
+
+// Memanggil fungsi hapusElemen setiap kali tombol dengan kelas hapus-input diklik
+
+var test = document.getElementsByClassName('input-form');
+var hapusbutton = document.getElementsByClassName('hapus-input');
+var hapus = function hapusElement(){
+  // console.log(test);
+  for (let i = 0; i < hapusbutton.length; i++) {
+    var toogle = hapusbutton[i];
+    // document.querySelector('.modal-form-body-kategori').removeChild(toogle);
+    console.log(i);
+  console.log("data di hapus")}
+}
+
+document.querySelector('#hapus-input').addEventListener('click', function() {
+hapus();
+});
+
+
+//tambah element baru
+// Mendapatkan elemen input, elemen daftar, dan elemen item
+var input = document.getElementById("userInput");
+var ul = document.querySelector("modal-form-body-kategori");
+var item = document.getElementsByTagName("li");
+
+// Fungsi untuk mendapatkan panjang input dan item
+function inputLength() {
+    return input.value.length;
+}
+
+function listLength() {
+    return item.length;
+}
+
+// Fungsi untuk membuat elemen daftar baru
+function createListElement() {
+    var li = document.createElement("div");
+    li.className = "input-form";
+    // li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
+    input.value = "";
+
+    // Menambahkan tombol hapus pada item
+    var dBtn = document.createElement("button");
+    dBtn.className = "hapus-input";
+    dBtn.appendChild(document.createTextNode("X"));
+    li.appendChild(dBtn);
+
+    // Menghapus item yang diklik
+    function deleteListItem(li) {
+        li.classList.add("delete");
+    }
+
+    dBtn.addEventListener("click", function() {
+        // console.log(li);
+        deleteListItem(li);
+    });
+} 
+
+
+</script>
 
 <script type="text/javascript">
     var container = document.getElementById('items');
