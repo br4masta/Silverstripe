@@ -96,7 +96,7 @@
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1123px) {
     .content{
     /* background-color: #CB3A31; */
     }

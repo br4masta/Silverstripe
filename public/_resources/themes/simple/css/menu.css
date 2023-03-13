@@ -34,6 +34,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-left: 30px;
 }
 .Menu-content .wrap-sorting .button-wrap .change {
   background-color: #2ECC71;
@@ -244,6 +245,7 @@
   text-align: left;
   width: 227px;
   margin: 0;
+  color: #8E8E8E;
 }
 .Menu-content .input-content .baris2 .input input {
   width: 644px;
@@ -251,6 +253,7 @@
   background: #D5D5D5;
   border: 1px solid #B0B0B0;
   border-radius: 6px;
+  color: #8E8E8E;
 }
 .Menu-content .input-content .baris3 {
   margin: 30px;
