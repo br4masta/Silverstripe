@@ -17,4 +17,5 @@ SilverStripe\Control\Director:
     'api2': 'TesApiController'
     'book_crud//$Action/$ID/$OtherID': 'BukuController'
     'slicing': 'TesSlicingController'
+    'slicing2': 'TesSlicingController2'
     
