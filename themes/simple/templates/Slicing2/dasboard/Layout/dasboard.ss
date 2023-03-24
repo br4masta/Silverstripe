@@ -41,6 +41,7 @@
   $('.table').DataTable( {
     "processing": true,
     "serverSide": true,
+    "searching": false,
     "ajax": "http://localhost/Silverstripe-2/slicing2/getMakanan",
     "columns": [
     { "data": "checkbox" },

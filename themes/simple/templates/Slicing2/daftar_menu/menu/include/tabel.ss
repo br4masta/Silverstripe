@@ -1,4 +1,4 @@
-<% require themedCSS('menu') %>
+
 
 <style>
     .hide{
