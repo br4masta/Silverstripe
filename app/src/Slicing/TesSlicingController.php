@@ -46,11 +46,29 @@ class TesSlicingController extends Controller
     }
     public function kategori()
     {
+
         $data = [];
         return $this->customise($data)->renderWith(array('Slicing/daftar_menu/kategori/kategori', 'Slicing/dasboard/pagedasboard'));
     }
     public function menu()
     {
+          // konfigurasi koneksi database
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "silverstripe_2";
+      
+          // membuat koneksi database
+          $conn = new mysqli($servername, $username, $password, $dbname);
+      
+          // mengecek koneksi database
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+          }
+
+
+        $sql = "SELECT id, Nama, Kategori, Harga, Status FROM makanan $where $order_by LIMIT $start, $length";
+
         $data = [];
         return $this->customise($data)->renderWith(array('Slicing/daftar_menu/menu/menu', 'Slicing/dasboard/pagedasboard'));
     }

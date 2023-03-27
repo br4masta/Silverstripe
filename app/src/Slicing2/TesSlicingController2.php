@@ -20,6 +20,9 @@ class TesSlicingController2 extends Controller
     private static $allowed_actions = [
         'index',
         'getMakanan',
+        'kategori',
+        'Getkategori',
+        'Updatekategori',
     ];
 
     public function index()
@@ -28,6 +31,72 @@ class TesSlicingController2 extends Controller
         return $this->customise($data)->renderWith(array('Slicing2/dasboard/dasboard', 'Slicing2/dasboard/pagedasboard'));
     }
     
+    public function kategori()
+    {
+        $ambilurl = 'http://localhost/Silverstripe-2/slicing2/Getkategori/';
+        $updateurl = 'http://localhost/Silverstripe-2/slicing2/Updatekategori/';
+
+        $data = [
+            'urlslicing' => $ambilurl,
+            'updateurl' => $updateurl,
+
+        ];
+        return $this->customise($data)->renderWith(array('Slicing2/dasboard/kategori', 'Slicing2/dasboard/pagedasboard'));
+    }
+
+    public function Getkategori()
+    {
+        $host = 'localhost';
+        $user = 'root';
+        $pass = '';
+        $db = 'silverstripe_2';
+        
+        $link = mysqli_connect($host, $user, $pass, $db) or die(mysqli_error());
+
+        $query = "SELECT * FROM list_kategori";
+        $kategori = mysqli_query($link, $query);
+
+        foreach ($kategori as $k){
+            
+            // echo $k['id'] . $k['kategori']  ;
+            echo '<div class="wrap'.$k['id'].'" id="draggable-4"> <div class="wrap-2">
+            <img src="$ThemeDir/images/img/Kategori/bx_move-vertical.svg" alt="">
+            <p class="name">'. $k['kategori'] .'</p>
+            <div class="status">
+                <p>'. $k['jumlah'] .'</p>
+            </div>
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="'.$k['id'].'" class="tes-checkbox"'. ($k['status']=='aktif' ? "checked" : "") .' >
+            <span class="slider round"></span>
+        </label> 
+        </div>';
+        }
+    }
+    public function Updatekategori()
+    {
+        $host = 'localhost';
+        $user = 'root';
+        $pass = '';
+        $db = 'silverstripe_2';
+        
+        $link = mysqli_connect($host, $user, $pass, $db) or die(mysqli_error());
+
+        $slider = mysqli_real_escape_string($link, $_POST['slider']);
+        $id = mysqli_real_escape_string($link, $_POST['id']);
+
+
+        $query = "UPDATE list_kategori SET status = '$slider' WHERE id = $id;";
+        $updatekategori = mysqli_query($link, $query);
+
+        if($updatekategori){
+            echo "true";
+        }else{
+            echo "error";
+        }
+    }
+
+
     public function getMakanan() {
         
         // konfigurasi koneksi database

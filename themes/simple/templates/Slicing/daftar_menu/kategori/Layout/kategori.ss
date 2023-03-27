@@ -67,6 +67,8 @@
     </div>
 </div>
 
+<button id="test">test</button>
+
 <!-- toogle bar modal -->
 <div class="modal fade" id="modal-aktif-kategori" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -216,20 +218,31 @@ function createListElement() {
 </script>
 
 <script type="text/javascript">
+  let sorting = 0;
+  let testing = '';
+
+
     var container = document.getElementById('items');
     var sort = Sortable.create(container, {
       onUpdate: function(evt){
         console.log(evt.oldIndex + '-' + evt.newIndex);
+        sorting=1;
+        console.log(evt);
+        testing = evt;
       }
     });
     
-</script>
 
-<!-- script ini digunakan untuk menampilkan validasi terhadap tombol switch -->
-<!-- validasi berupa modal bawaan dari bootsrap -->
-<script>
+
+      $("#test").click(function(){
+        console.log(sorting);
+        console.log(testing);
+      });
+   
+
   var checkboxes = document.getElementsByClassName("tes-checkbox");
 
+ 
   for (let i = 0; i < checkboxes.length; i++) {
   const toggle = checkboxes[i];
 
@@ -274,4 +287,5 @@ function confirmSwitch(i) {
   $('#modal-aktif-kategori').modal('hide');
   $('#modal-nonaktif-kategori').modal('hide');
 }
+
 </script>
